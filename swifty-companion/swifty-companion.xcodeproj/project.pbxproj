@@ -13,9 +13,13 @@
 		AF5628EA290E97EB00D16089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628E8290E97EB00D16089 /* Main.storyboard */; };
 		AF5628EC290E97ED00D16089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5628EB290E97ED00D16089 /* Assets.xcassets */; };
 		AF5628EF290E97ED00D16089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628ED290E97ED00D16089 /* LaunchScreen.storyboard */; };
+		C80D36BE6F1B9442BB3B831B /* Pods_swifty_companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DEB36CC35B73D77636DD6B /* Pods_swifty_companion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57A1D74C6BAA3A2816F82B35 /* Pods-swifty-companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-companion.debug.xcconfig"; path = "Target Support Files/Pods-swifty-companion/Pods-swifty-companion.debug.xcconfig"; sourceTree = "<group>"; };
+		83DEB36CC35B73D77636DD6B /* Pods_swifty_companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A655FCCA36546887C8385C60 /* Pods-swifty-companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-companion.release.xcconfig"; path = "Target Support Files/Pods-swifty-companion/Pods-swifty-companion.release.xcconfig"; sourceTree = "<group>"; };
 		AF5628DF290E97EB00D16089 /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5628E2290E97EB00D16089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5628E4290E97EB00D16089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80D36BE6F1B9442BB3B831B /* Pods_swifty_companion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7519697B098E8DC179E36A19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57A1D74C6BAA3A2816F82B35 /* Pods-swifty-companion.debug.xcconfig */,
+				A655FCCA36546887C8385C60 /* Pods-swifty-companion.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD69503C289CEB5E00657F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83DEB36CC35B73D77636DD6B /* Pods_swifty_companion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF5628D6290E97EB00D16089 = {
 			isa = PBXGroup;
 			children = (
 				AF5628E1290E97EB00D16089 /* swifty-companion */,
 				AF5628E0290E97EB00D16089 /* Products */,
+				7519697B098E8DC179E36A19 /* Pods */,
+				AD69503C289CEB5E00657F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF5628F3290E97ED00D16089 /* Build configuration list for PBXNativeTarget "swifty-companion" */;
 			buildPhases = (
+				5C9B649E45BD114D52CA1C8F /* [CP] Check Pods Manifest.lock */,
 				AF5628DB290E97EB00D16089 /* Sources */,
 				AF5628DC290E97EB00D16089 /* Frameworks */,
 				AF5628DD290E97EB00D16089 /* Resources */,
+				9ECE6CC5A8E7FAB96881C644 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C9B649E45BD114D52CA1C8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-companion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECE6CC5A8E7FAB96881C644 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF5628DB290E97EB00D16089 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		AF5628F4290E97ED00D16089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A1D74C6BAA3A2816F82B35 /* Pods-swifty-companion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,9 +360,12 @@
 				DEVELOPMENT_TEAM = UJZ22F5K9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swifty-companion/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "swifty-companion";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,14 +375,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dredfort.42.swifty-companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AF5628F5290E97ED00D16089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A655FCCA36546887C8385C60 /* Pods-swifty-companion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,9 +395,12 @@
 				DEVELOPMENT_TEAM = UJZ22F5K9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swifty-companion/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "swifty-companion";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +410,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dredfort.42.swifty-companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

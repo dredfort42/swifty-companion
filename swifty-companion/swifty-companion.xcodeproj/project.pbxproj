@@ -13,6 +13,8 @@
 		AF5628EA290E97EB00D16089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628E8290E97EB00D16089 /* Main.storyboard */; };
 		AF5628EC290E97ED00D16089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5628EB290E97ED00D16089 /* Assets.xcassets */; };
 		AF5628EF290E97ED00D16089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628ED290E97ED00D16089 /* LaunchScreen.storyboard */; };
+		AFC7BDF32910375600297FF1 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7BDF22910375600297FF1 /* OAuth.swift */; };
+		AFFDE59A2912AE2C007BAB15 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDE5992912AE2C007BAB15 /* LoginData.swift */; };
 		C80D36BE6F1B9442BB3B831B /* Pods_swifty_companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DEB36CC35B73D77636DD6B /* Pods_swifty_companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		AF5628EB290E97ED00D16089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5628EE290E97ED00D16089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5628F0290E97ED00D16089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC7BDF22910375600297FF1 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		AFFDE5992912AE2C007BAB15 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				57A1D74C6BAA3A2816F82B35 /* Pods-swifty-companion.debug.xcconfig */,
 				A655FCCA36546887C8385C60 /* Pods-swifty-companion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,25 @@
 		AF5628E1290E97EB00D16089 /* swifty-companion */ = {
 			isa = PBXGroup;
 			children = (
-				AF5628E2290E97EB00D16089 /* AppDelegate.swift */,
-				AF5628E4290E97EB00D16089 /* SceneDelegate.swift */,
+				AFC7BDF22910375600297FF1 /* OAuth.swift */,
+				AFFDE5992912AE2C007BAB15 /* LoginData.swift */,
 				AF5628E6290E97EB00D16089 /* ViewController.swift */,
 				AF5628E8290E97EB00D16089 /* Main.storyboard */,
-				AF5628EB290E97ED00D16089 /* Assets.xcassets */,
-				AF5628ED290E97ED00D16089 /* LaunchScreen.storyboard */,
 				AF5628F0290E97ED00D16089 /* Info.plist */,
+				AFC7BDF12910329D00297FF1 /* Support Files */,
 			);
 			path = "swifty-companion";
+			sourceTree = "<group>";
+		};
+		AFC7BDF12910329D00297FF1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF5628E2290E97EB00D16089 /* AppDelegate.swift */,
+				AF5628E4290E97EB00D16089 /* SceneDelegate.swift */,
+				AF5628EB290E97ED00D16089 /* Assets.xcassets */,
+				AF5628ED290E97ED00D16089 /* LaunchScreen.storyboard */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +223,8 @@
 				AF5628E7290E97EB00D16089 /* ViewController.swift in Sources */,
 				AF5628E3290E97EB00D16089 /* AppDelegate.swift in Sources */,
 				AF5628E5290E97EB00D16089 /* SceneDelegate.swift in Sources */,
+				AFFDE59A2912AE2C007BAB15 /* LoginData.swift in Sources */,
+				AFC7BDF32910375600297FF1 /* OAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

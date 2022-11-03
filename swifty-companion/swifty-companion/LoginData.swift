@@ -10,21 +10,10 @@ import Alamofire
 import SwiftyJSON
 
 class LoginData {
-	var loginInformation: JSON {
-		didSet {
-			print("--- LoginInformation ---")
-			print(loginInformation)
-		}
-	}
 
-	init(_ login: String) {
-		self.loginInformation = JSON()
-		getLoginInformation(login: login)
-	}
-
-	func getLoginInformation(login: String)
+	static func getLoginInformation(login: String, completionOfReceipt: @escaping (JSON?) -> Void)
 	{
-		OAuth().checkToken()
+		OAuth.checkToken()
 		let token: String = UserDefaults.standard.string(forKey: "token") ?? ""
 		let url: URLConvertible = "https://api.intra.42.fr/v2/users/" + login
 		let headers: HTTPHeaders = ["Authorization" : "Bearer " + token]
@@ -39,9 +28,10 @@ class LoginData {
 			switch response.result {
 				case .success:
 					print("[v] Information requested")
-					self.loginInformation = JSON(response.value!)
+					completionOfReceipt(JSON(response.value!))
 				case .failure:
 					print("[x] Information not requested")
+					completionOfReceipt(nil)
 			}
 		}
 	}

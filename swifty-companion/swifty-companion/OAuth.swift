@@ -16,7 +16,7 @@ import SwiftyJSON
 
 class OAuth {
 	
-	func getToken() {
+	static func getToken() {
 		if !UserDefaults.standard.bool(forKey: "token") {
 			let url: URLConvertible = "https://api.intra.42.fr/oauth/token"
 			let parameters: Parameters = [
@@ -43,7 +43,7 @@ class OAuth {
 							UserDefaults.standard.set(token, forKey: "token")
 						}
 						print("TOKEN: " + token)
-						self.checkToken()
+						OAuth.checkToken()
 					case .failure:
 						print("[x] Token receive error")
 				}
@@ -51,7 +51,7 @@ class OAuth {
 		}
 	}
 
-	func checkToken() {
+	static func checkToken() {
 		let token: String = UserDefaults.standard.string(forKey: "token") ?? ""
 		let url: URLConvertible = "https://api.intra.42.fr/oauth/token/info"
 		let headers: HTTPHeaders = ["Authorization" : "Bearer " + token]
@@ -70,7 +70,7 @@ class OAuth {
 				case .failure:
 					print("[x] Invalid token")
 					print("Trying receive new one...")
-					self.getToken()
+					OAuth.getToken()
 			}
 		}
 	}

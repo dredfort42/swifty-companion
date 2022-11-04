@@ -13,6 +13,9 @@
 		AF5628EA290E97EB00D16089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628E8290E97EB00D16089 /* Main.storyboard */; };
 		AF5628EC290E97ED00D16089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5628EB290E97ED00D16089 /* Assets.xcassets */; };
 		AF5628EF290E97ED00D16089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5628ED290E97ED00D16089 /* LaunchScreen.storyboard */; };
+		AF898C272914DC420047C46A /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF898C262914DC420047C46A /* SkillsTableViewCell.swift */; };
+		AF898C2929150FA90047C46A /* ProjectsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF898C2829150FA90047C46A /* ProjectsTVC.swift */; };
+		AF898C2B291514A90047C46A /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF898C2A291514A90047C46A /* ProjectsTableViewCell.swift */; };
 		AFAADF532913EFB800DA092B /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAADF522913EFB800DA092B /* InformationVC.swift */; };
 		AFC7BDF32910375600297FF1 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7BDF22910375600297FF1 /* OAuth.swift */; };
 		AFFDE59A2912AE2C007BAB15 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDE5992912AE2C007BAB15 /* LoginData.swift */; };
@@ -31,6 +34,9 @@
 		AF5628EB290E97ED00D16089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5628EE290E97ED00D16089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5628F0290E97ED00D16089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF898C262914DC420047C46A /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		AF898C2829150FA90047C46A /* ProjectsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTVC.swift; sourceTree = "<group>"; };
+		AF898C2A291514A90047C46A /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		AFAADF522913EFB800DA092B /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
 		AFC7BDF22910375600297FF1 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		AFFDE5992912AE2C007BAB15 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				AFFDE5992912AE2C007BAB15 /* LoginData.swift */,
 				AF5628E6290E97EB00D16089 /* SearchVC.swift */,
 				AFAADF522913EFB800DA092B /* InformationVC.swift */,
+				AF898C262914DC420047C46A /* SkillsTableViewCell.swift */,
+				AF898C2829150FA90047C46A /* ProjectsTVC.swift */,
+				AF898C2A291514A90047C46A /* ProjectsTableViewCell.swift */,
 				AF5628E8290E97EB00D16089 /* Main.storyboard */,
 				AF5628F0290E97ED00D16089 /* Info.plist */,
 				AFC7BDF12910329D00297FF1 /* Support Files */,
@@ -224,8 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5628E7290E97EB00D16089 /* SearchVC.swift in Sources */,
+				AF898C2B291514A90047C46A /* ProjectsTableViewCell.swift in Sources */,
 				AFAADF532913EFB800DA092B /* InformationVC.swift in Sources */,
 				AF5628E3290E97EB00D16089 /* AppDelegate.swift in Sources */,
+				AF898C2929150FA90047C46A /* ProjectsTVC.swift in Sources */,
+				AF898C272914DC420047C46A /* SkillsTableViewCell.swift in Sources */,
 				AF5628E5290E97EB00D16089 /* SceneDelegate.swift in Sources */,
 				AFFDE59A2912AE2C007BAB15 /* LoginData.swift in Sources */,
 				AFC7BDF32910375600297FF1 /* OAuth.swift in Sources */,

@@ -27,10 +27,10 @@ class LoginData {
 			response in
 			switch response.result {
 				case .success:
-					print("[v] Information requested")
+					print("[v] Information received")
 					completionOfReceipt(JSON(response.value!))
 				case .failure:
-					print("[x] Information not requested")
+					print("[x] Information not received")
 					completionOfReceipt(nil)
 			}
 		}

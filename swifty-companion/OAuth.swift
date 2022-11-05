@@ -21,8 +21,8 @@ class OAuth {
 			let url: URLConvertible = "https://api.intra.42.fr/oauth/token"
 			let parameters: Parameters = [
 				"grant_type" : "client_credentials",
-				"client_id" : "u-s4t2ud-9126fbe2168903deb0ac1815cbc162f437b4be2923cd5290fe61581e2e17ab14",
-				"client_secret" : "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"
+				"client_id" : (ProcessInfo.processInfo.environment["client_id"] ?? "") as String,
+				"client_secret" : (ProcessInfo.processInfo.environment["client_secret"] ?? "") as String
 			]
 			var token: String = ""
 			AF.request(

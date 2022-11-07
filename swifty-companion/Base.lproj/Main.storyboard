@@ -87,7 +87,7 @@ Please check your input and try again!</string>
             <objects>
                 <viewController id="mXU-gV-dhd" customClass="InformationVC" customModule="swifty_companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGb-1D-hAh">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="950"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-er-soe" userLabel="Main View">
@@ -148,7 +148,7 @@ Please check your input and try again!</string>
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLS-v0-dYJ">
-                                <rect key="frame" x="0.0" y="211" width="390" height="755"/>
+                                <rect key="frame" x="0.0" y="211" width="390" height="705"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-SQ-6j5" userLabel="Additional View">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="700"/>
@@ -266,7 +266,7 @@ Please check your input and try again!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vkR-SD-gYe"/>
-                    <size key="freeformSize" width="390" height="1000"/>
+                    <size key="freeformSize" width="390" height="950"/>
                     <connections>
                         <outlet property="displayUserProjectsButtonView" destination="NT9-a5-vok" id="rns-6y-Kv2"/>
                         <outlet property="imageView" destination="kM6-Zx-QZl" id="1te-4B-bPQ"/>

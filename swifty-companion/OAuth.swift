@@ -15,8 +15,13 @@ import Alamofire
 import SwiftyJSON
 
 class OAuth {
+
+	static var counter: UInt8 = 0
 	
 	static func getToken() {
+		if counter == 5 {
+			exit(1)
+		}
 		if !UserDefaults.standard.bool(forKey: "token") {
 			let url: URLConvertible = "https://api.intra.42.fr/oauth/token"
 			let parameters: Parameters = [
@@ -46,12 +51,15 @@ class OAuth {
 						OAuth.checkToken()
 					case .failure:
 						print("[x] Token receive error")
+						OAuth.getToken()
+						counter += 1
 				}
 			}
 		}
 	}
 
 	static func checkToken() {
+		counter = 0
 		let token: String = UserDefaults.standard.string(forKey: "token") ?? ""
 		let url: URLConvertible = "https://api.intra.42.fr/oauth/token/info"
 		let headers: HTTPHeaders = ["Authorization" : "Bearer " + token]

@@ -46,7 +46,7 @@ class ProjectsTVC: UITableViewController {
 					status = String(mark)
 				}
 			case "parent":
-				status = "[oo]"
+				status = "[+]"
 			case "searching_a_group":
 				status = "[searching a group]"
 			case "in_progress":
